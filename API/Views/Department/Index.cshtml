@@ -1,0 +1,41 @@
+﻿@model IEnumerable<API.Models.Department>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table id="DepartmentTable" class="display">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepartmentName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdateDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeleteDate)
+                </th>
+            </tr>
+        </thead>
+        <tbody class="departmentbody" />
+    </table>
+</body>
+</html>
+
+
+
+@section Script{
+    <script src="~/Scripts/DepartmentJs.js"></script>
+}

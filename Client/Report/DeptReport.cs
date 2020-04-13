@@ -80,7 +80,7 @@ namespace Client.Report
             _pdfCell.BackgroundColor = BaseColor.LIGHT_GRAY;
             _pdfTable.AddCell(_pdfCell);
 
-            _pdfCell = new PdfPCell(new Phrase("Nama", _fontStyles));
+            _pdfCell = new PdfPCell(new Phrase("Nama Department", _fontStyles));
             _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
             _pdfCell.VerticalAlignment = Element.ALIGN_MIDDLE;
             _pdfCell.BackgroundColor = BaseColor.LIGHT_GRAY;
@@ -104,10 +104,9 @@ namespace Client.Report
 
             #region table body
             _fontStyles = FontFactory.GetFont("Tahoma", 8f, 0);
-            int serialNumber = 1;
             foreach (Department item in dept)
             {
-                _pdfCell = new PdfPCell(new Phrase(serialNumber++.ToString(), _fontStyles));
+                _pdfCell = new PdfPCell(new Phrase(item.Id.ToString(), _fontStyles));
                 _pdfCell.HorizontalAlignment = Element.ALIGN_CENTER;
                 _pdfCell.VerticalAlignment = Element.ALIGN_MIDDLE;
                 _pdfCell.BackgroundColor = BaseColor.WHITE;

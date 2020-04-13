@@ -93,7 +93,7 @@ namespace Client.Controllers
             DeptReport dept = new DeptReport();
             var readTask = await GetDept();
             byte[] abytes = dept.PrepareReport(readTask);
-            return File(abytes, "application/pdf", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/mm/yyyy")}).pdf");
+            return File(abytes, "application/pdf", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy")}).pdf");
         }
 
         public async Task<List<Department>> GetDept()
@@ -114,7 +114,7 @@ namespace Client.Controllers
             var columnHeaders = new String[]
             {
                 "Id",
-                "Department Name",
+                "Nama Department",
                 "Tanggal Pembuatan",
                 "Tanggal Perbaharui"
             };
@@ -153,7 +153,7 @@ namespace Client.Controllers
                 }
                 result = package.GetAsByteArray();
             }
-            return File(result, "application/ms-excel", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/mm/yyyy")}).xlsx");
+            return File(result, "application/ms-excel", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy")}).xlsx");
         }
 
         public async Task<ActionResult> exportCSV()
@@ -167,7 +167,7 @@ namespace Client.Controllers
             var columnHeaders = new String[]
             {
                 "Id",
-                "Department Name",
+                "Nama Department",
                 "Tanggal Pembuatan",
                 "Tanggal Perbaharui"
             };
@@ -193,7 +193,7 @@ namespace Client.Controllers
                 });
             }
             byte[] buffer = Encoding.ASCII.GetBytes($"{string.Join(",", columnHeaders)}\r\n{deptCSV.ToString()}");
-            return File(buffer, "text/csv", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/mm/yyyy")}).csv");
+            return File(buffer, "text/csv", $"Department Report ({DateTime.Now.ToString("hh:mm:ss dd/MM/yyyy")}).csv");
         }
 
     }

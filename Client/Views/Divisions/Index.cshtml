@@ -13,11 +13,19 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    @*button for showing modal*@
-                    <button onclick="ShowModal();" type="button" class="btn pull-left hidden-sm-down btn-success" style="margin-bottom:10px">
-                        <i class="mdi mdi-plus-circle"></i> Create
-                    </button>
-                    <div class="table-responsive m-t-40">
+                    <div class="mb-5">
+                        @*button for showing modal*@
+                        <button onclick="ShowModal();" type="button" class="btn pull-left hidden-sm-down btn-success" style="margin-bottom:10px">
+                            <i class="mdi mdi-plus-circle"></i> Create
+                        </button>
+                    </div>
+                    <div>
+                        @*button for Print PDF*@
+                        <button onclick="location.href='@Url.Action("exportPDF", "Divisions")'" type="button" class="btn btn-info button button4"> PDF </button>
+                        <button onclick="location.href='@Url.Action("exportXLS", "Divisions")'" type="button" class="btn btn-info button button4"> XLS </button>
+                        <button onclick="location.href='@Url.Action("exportCSV", "Divisions")'" type="button" class="btn btn-info button button4"> CSV </button>
+                    </div>
+                    <div class="table-responsive m-t-10">
                         <table id="Division" class="table table-striped table-bordered">
                             <thead>
                                 <tr>

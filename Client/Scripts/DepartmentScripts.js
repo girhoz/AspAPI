@@ -1,4 +1,5 @@
 ﻿var table = null;
+var dateNow = new Date();
 $(document).ready(function () {
     //debugger;
     table = $('#Department').DataTable({ //Nama table pada index
@@ -8,6 +9,40 @@ $(document).ready(function () {
             dataType: "json",
             dataSrc: "",
         },
+        //Adding Export Button Template
+        //dom : 'Bfrtip',
+        //buttons: [
+        //    {
+        //        extend: 'copyHtml5',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'csvHtml5',
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'excelHtml5',
+        //        filename: function () {
+        //            return "Department" + moment(dateNow).format('DD/MM/YYYY');
+        //        },
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    },
+        //    {
+        //        extend: 'pdfHtml5',
+        //        filename: function () {
+        //            return "Department" + moment(dateNow).format('DD/MM/YYYY');
+        //        },
+        //        exportOptions: {
+        //            columns: [0, 1, 2]
+        //        }
+        //    }
+        //],
         "columnDefs": [
             { "orderable": false, "targets": 3 },
             { "searchable": false, "targets": 3 }
@@ -23,7 +58,7 @@ $(document).ready(function () {
                 "data": "UpdateDate", "render": function (data) {
                     var dateupdate = "Not Updated Yet";
                     var nulldate = null;
-                    if (data == nulldate) {
+                    if (data === nulldate) {
                         return dateupdate;
                     } else {
                         return moment(data).format('DD/MM/YYYY');
@@ -49,7 +84,7 @@ function Save() {
         data: Department
     }).then((result) => {
         //debugger;
-        if (result.StatusCode == 200) {
+        if (result.StatusCode === 200) {
             Swal.fire({
                 position: 'center',
                 type: 'success',
@@ -99,7 +134,7 @@ function Edit() {
         data: Department
     }).then((result) => {
         //debugger;
-        if (result.StatusCode == 200) {
+        if (result.StatusCode === 200) {
             Swal.fire({
                 position: 'center',
                 type: 'success',
@@ -132,7 +167,7 @@ function Delete(Id) {
                 url: "/Departments/Delete/",
                 data: { Id: Id }
             }).then((result) => {
-                if (result.StatusCode == 200) {
+                if (result.StatusCode === 200) {
                     Swal.fire({
                         position: 'center',
                         type: 'success',

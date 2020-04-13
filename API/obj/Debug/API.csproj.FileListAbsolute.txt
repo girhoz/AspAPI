@@ -74,6 +74,7 @@ D:\Latihan\AspAPI\API\bin\Microsoft.AI.DependencyCollector.xml
 D:\Latihan\AspAPI\API\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Latihan\AspAPI\API\bin\Microsoft.AI.WindowsServer.xml
 D:\Latihan\AspAPI\API\bin\Microsoft.AI.Web.xml
+D:\Latihan\AspAPI\API\obj\Debug\API.csprojResolveAssemblyReference.cache
 D:\Latihan\AspAPI\API\obj\Debug\API.Migrations.adddepartmentmodel.resources
 D:\Latihan\AspAPI\API\obj\Debug\API.Migrations.adddivisionmodel.resources
 D:\Latihan\AspAPI\API\obj\Debug\API.csproj.GenerateResource.Cache

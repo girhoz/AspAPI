@@ -30,6 +30,7 @@ D:\Latihan\AspAPI\Client\bin\Client.dll
 D:\Latihan\AspAPI\Client\bin\Client.pdb
 D:\Latihan\AspAPI\Client\bin\Antlr3.Runtime.dll
 D:\Latihan\AspAPI\Client\bin\API.dll
+D:\Latihan\AspAPI\Client\bin\itextsharp.dll
 D:\Latihan\AspAPI\Client\bin\Microsoft.AI.Agent.Intercept.dll
 D:\Latihan\AspAPI\Client\bin\Microsoft.AI.DependencyCollector.dll
 D:\Latihan\AspAPI\Client\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -55,6 +56,7 @@ D:\Latihan\AspAPI\Client\bin\Dapper.dll
 D:\Latihan\AspAPI\Client\bin\EntityFramework.dll
 D:\Latihan\AspAPI\Client\bin\API.pdb
 D:\Latihan\AspAPI\Client\bin\API.dll.config
+D:\Latihan\AspAPI\Client\bin\itextsharp.xml
 D:\Latihan\AspAPI\Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\Latihan\AspAPI\Client\bin\System.Net.Http.Formatting.xml
 D:\Latihan\AspAPI\Client\bin\System.Web.Http.xml
@@ -78,3 +80,5 @@ D:\Latihan\AspAPI\Client\bin\EntityFramework.xml
 D:\Latihan\AspAPI\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 D:\Latihan\AspAPI\Client\obj\Debug\Client.dll
 D:\Latihan\AspAPI\Client\obj\Debug\Client.pdb
+D:\Latihan\AspAPI\Client\bin\EPPlus.Core.dll
+D:\Latihan\AspAPI\Client\bin\EPPlus.Core.xml

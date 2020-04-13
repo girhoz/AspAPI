@@ -5,9 +5,6 @@
 }
 
 @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
-<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-<div class="container-fluid">
     <!-- ============================================================== -->
     <!-- Start Page Content -->
     <!-- ============================================================== -->
@@ -15,23 +12,32 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    @*button for showing modal*@
-                    <button onclick="ShowModal();" type="button" class="btn pull-left hidden-sm-down btn-success" style="margin-bottom:10px">
-                        <i class="mdi mdi-plus-circle"></i> Create
-                    </button>
-                    <div class="table-responsive m-t-40">
-                        <table id="Department" class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Create Date</th>
-                                    <th>Update Date</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                        </table>
+                    <div class="container-fluid">
+                        <div class="mb-5">
+                            @*button for showing modal*@
+                            <button onclick="ShowModal();" type="button" class="btn pull-left hidden-sm-down btn-success" style="margin-bottom:10px">
+                                <i class="mdi mdi-plus-circle"></i> Create
+                            </button>
+                        </div>
+                        <div>
+                            @*button for Print PDF*@
+                            <button onclick="location.href='@Url.Action("exportPDF", "Departments")'" type="button" class="btn btn-info button button4"> PDF </button>
+                            <button onclick="location.href='@Url.Action("exportXLS", "Departments")'" type="button" class="btn btn-info button button4"> XLS </button>
+                            <button onclick="location.href='@Url.Action("exportCSV", "Departments")'" type="button" class="btn btn-info button button4"> CSV </button>
+                        </div>
+                        <div class="table-responsive m-t-10">
+                            <table id="Department" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Create Date</th>
+                                        <th>Update Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
@@ -144,6 +150,14 @@
     <script src="~/Content/Mini AdminPro/main/js/custom.min.js"></script>
     <!-- This is data table -->
     <script src="~/Content/Mini AdminPro/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
 
     @*Script for department (include modal)*@
     <script src="~/Scripts/DepartmentScripts.js"></script>
